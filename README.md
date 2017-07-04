@@ -40,6 +40,9 @@ self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[m
 self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[mainContainer]|", options: [], metrics: metrics, views: views))
 ```
 
+#### Example 1 screenshot result.
+
+<img src="https://github.com/CristianCardosoA/Auto-layout-VF/blob/master/Screen%20Shot%202017-07-03%20at%2010.41.28%20PM.png" width="250" />
 
 ### More info about VF language:
 
