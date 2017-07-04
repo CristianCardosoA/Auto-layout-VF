@@ -69,7 +69,7 @@ self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[f
 
 #### Example 2 screenshot result.
 
-<img src="https://github.com/CristianCardosoA/Auto-layout-VF/blob/master/Screen%20Shot%202017-07-03%20at%2010.41.28%20PM.png" width="250" />
+<img src="https://github.com/CristianCardosoA/Auto-layout-VF/blob/master/Screen%20Shot%202017-07-03%20at%2010.56.52%20PM.png" width="250" />
 
 ### More info about VF language:
 
