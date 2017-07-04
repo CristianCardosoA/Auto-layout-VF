@@ -37,7 +37,7 @@ class ViewController: UIViewController {
         //  EXAMPLE 2.
         //  ======================================
  
-        let firstView = UIView()
+        /*let firstView = UIView()
         firstView.backgroundColor = UIColor.blue
         firstView.translatesAutoresizingMaskIntoConstraints = false
         
@@ -54,8 +54,39 @@ class ViewController: UIViewController {
         
         self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[secondView]|", options: [], metrics: [:], views: views))
          
-        self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[firstView][secondView(==firstView)]|", options: [], metrics: [:], views: views))
+        self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[firstView][secondView(==firstView)]|", options: [], metrics: [:], views: views))*/
         
+        
+        //  EXAMPLE 3.
+        //  ======================================
+        
+        let firstView = UIView()
+        firstView.backgroundColor = UIColor.blue
+        firstView.translatesAutoresizingMaskIntoConstraints = false
+         
+        let secondView = UIView()
+        secondView.backgroundColor = UIColor.red
+        secondView.translatesAutoresizingMaskIntoConstraints = false
+        
+        let thirdView = UIView()
+        thirdView.backgroundColor = UIColor.yellow
+        thirdView.translatesAutoresizingMaskIntoConstraints = false
+        
+        self.view.addSubview(firstView)
+        self.view.addSubview(secondView)
+        self.view.addSubview(thirdView)
+        
+        let metrics = ["padding" : self.view.bounds.height / 10]
+        
+        let views = ["firstView" : firstView, "secondView": secondView, "thirdView": thirdView]
+         
+        self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[firstView][secondView(==firstView)][thirdView(==firstView)]|", options: [], metrics: [:], views: views))
+        
+        self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-(padding)-[firstView]-(padding)-|", options: [], metrics: metrics, views: views))
+        
+        self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-(padding)-[secondView]-(padding)-|", options: [], metrics: metrics, views: views))
+        
+        self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-(padding)-[thirdView]-(padding)-|", options: [], metrics: metrics, views: views))
         
     }
     
