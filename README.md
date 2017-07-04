@@ -16,10 +16,10 @@ Lets create a multiple example using visual format language to create new constr
 
 Look, a list!
 
- * [Example 1](#example1)
- * [Example 2](#example2)
- * [Example 3](#example3)
- * [Example 4](#example4)
+ * [Example 1](#example-1)
+ * [Example 2](#example-2)
+ * [Example 3](#example-3)
+ * [Example 4](#example-4)
 
 And here's some code! :+1:
 
