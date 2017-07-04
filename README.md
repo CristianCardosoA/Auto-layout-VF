@@ -17,9 +17,9 @@ Lets create a multiple example using visual format language to create new constr
 Look, a list!
 
  * [Example 1](#Example1)
- * [Example 2]()
- * [Example 3]()
- * [Example 4]()
+ * [Example 2](#Example2)
+ * [Example 3](#Example3)
+ * [Example 4](#Example4)
 
 And here's some code! :+1:
 
@@ -41,11 +41,11 @@ self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[m
 self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[mainContainer]|", options: [], metrics: metrics, views: views))
 ```
 
-#### Example 1 screenshot result.
+## Example 1 screenshot result.
 
 <img src="https://github.com/CristianCardosoA/Auto-layout-VF/blob/master/Screen%20Shot%202017-07-03%20at%2010.41.28%20PM.png" width="250" />
 
-#### Example 2.
+## Example 2
 
 ```Swift
 let firstView = UIView()
@@ -68,11 +68,11 @@ self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[s
 self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[firstView][secondView(==firstView)]|", options: [], metrics: [:], views: views))
 ```
 
-#### Example 2 screenshot result.
+## Example 2 screenshot result.
 
 <img src="https://github.com/CristianCardosoA/Auto-layout-VF/blob/master/Screen%20Shot%202017-07-03%20at%2010.56.52%20PM.png" width="250" />
 
-#### Example 3.
+## Example 3
 
 ```Swift
 let firstView = UIView()
@@ -108,7 +108,7 @@ self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-(
 
 <img src="https://github.com/CristianCardosoA/Auto-layout-VF/blob/master/Screen%20Shot%202017-07-03%20at%2011.09.54%20PM.png" width="250" />
 
-#### Example 4.
+## Example 4
 
 ```Swift
 let firstView = UIView()
@@ -168,7 +168,7 @@ self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[l
 self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[label(==secondView)]|", options: NSLayoutFormatOptions.alignAllCenterY, metrics: [:], views: views))
 ```
 
-#### Example 4 screenshot result.
+## Example 4 screenshot result.
 
 <img src="https://github.com/CristianCardosoA/Auto-layout-VF/blob/master/Screen%20Shot%202017-07-03%20at%2011.55.26%20PM.png" width="250" />
 
