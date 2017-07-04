@@ -6,7 +6,7 @@ Basic useful feature list
 
  * ```translatesAutoresizingMaskIntoConstraints = false```
  * ```self.view.addSubview( YOUR VIEW )```
-  ```javascript
+  ```Swift
  self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "", options: [], metrics: metrics, views: views)
   ```
 
@@ -25,7 +25,7 @@ And here's some code! :+1:
 
 #### Example 1.
 
-```javascript
+```Swift
 let mainContainer = UIView()
 mainContainer.backgroundColor = UIColor.blue
 mainContainer.translatesAutoresizingMaskIntoConstraints = false
@@ -47,7 +47,7 @@ self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[m
 
 #### Example 2.
 
-```javascript
+```Swift
 let firstView = UIView()
 firstView.backgroundColor = UIColor.blue
 firstView.translatesAutoresizingMaskIntoConstraints = false
@@ -74,7 +74,7 @@ self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[f
 
 #### Example 3.
 
-```javascript
+```Swift
 let firstView = UIView()
 firstView.backgroundColor = UIColor.blue
 firstView.translatesAutoresizingMaskIntoConstraints = false
@@ -110,7 +110,7 @@ self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-(
 
 #### Example 4.
 
-```javascript
+```Swift
 let firstView = UIView()
 firstView.backgroundColor = UIColor(patternImage: UIImage(named:"image.jpg")!)
 firstView.translatesAutoresizingMaskIntoConstraints = false
