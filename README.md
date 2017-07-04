@@ -170,7 +170,7 @@ self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[l
 
 #### Example 4 screenshot result.
 
-<img src="https://github.com/CristianCardosoA/Auto-layout-VF/blob/master/Screen%20Shot%202017-07-03%20at%2011.09.54%20PM.png" width="250" />
+<img src="https://github.com/CristianCardosoA/Auto-layout-VF/blob/master/Screen%20Shot%202017-07-03%20at%2011.55.26%20PM.png" width="250" />
 
 ### More info about VF language:
 
