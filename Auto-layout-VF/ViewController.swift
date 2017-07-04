@@ -60,7 +60,7 @@ class ViewController: UIViewController {
         //  EXAMPLE 3.
         //  ======================================
         
-        let firstView = UIView()
+        /*let firstView = UIView()
         firstView.backgroundColor = UIColor.blue
         firstView.translatesAutoresizingMaskIntoConstraints = false
          
@@ -86,7 +86,68 @@ class ViewController: UIViewController {
         
         self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-(padding)-[secondView]-(padding)-|", options: [], metrics: metrics, views: views))
         
-        self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-(padding)-[thirdView]-(padding)-|", options: [], metrics: metrics, views: views))
+        self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-(padding)-[thirdView]-(padding)-|", options: [], metrics: metrics, views: views))*/
+        
+        
+        //  EXAMPLE 4.
+        //  ======================================
+        
+        let firstView = UIView()
+        firstView.backgroundColor = UIColor(patternImage: UIImage(named:"image.jpg")!)
+        firstView.translatesAutoresizingMaskIntoConstraints = false
+        
+        let secondView = UIView()
+        secondView.backgroundColor = UIColor.gray
+        secondView.translatesAutoresizingMaskIntoConstraints = false
+        
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "EXAMPLE 4"
+        label.textColor = UIColor.white
+        label.textAlignment = .center
+        secondView.addSubview(label)
+        
+        let thirdContainerView = UIView()
+        thirdContainerView.backgroundColor = UIColor.yellow
+        thirdContainerView.translatesAutoresizingMaskIntoConstraints = false
+        
+        let forthView = UIView()
+        forthView.backgroundColor = UIColor.orange
+        forthView.translatesAutoresizingMaskIntoConstraints = false
+        
+        let fifthView = UIView()
+        fifthView.backgroundColor = UIColor.cyan
+        fifthView.translatesAutoresizingMaskIntoConstraints = false
+        
+        thirdContainerView.addSubview(forthView)
+        thirdContainerView.addSubview(fifthView)
+        
+        self.view.addSubview(firstView)
+        self.view.addSubview(secondView)
+        self.view.addSubview(thirdContainerView)
+        
+        let metrics = ["firstViewHeight" : self.view.bounds.height * 0.6, "secondViewHeight" : self.view.bounds.height * 0.3, "thirdViewHeight" : self.view.bounds.height * 0.1]
+        
+        let views = ["firstView" : firstView, "secondView": secondView, "thirdContainerView": thirdContainerView, "forthView" : forthView, "fifthView": fifthView, "label" : label]
+        
+        self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[firstView]|", options: [], metrics: [:], views: views))
+        
+        self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[secondView]|", options: [], metrics: [:], views: views))
+        
+        self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[thirdContainerView]|", options: [], metrics: [:], views: views))
+        
+        self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[forthView][fifthView(==forthView)]|", options: [], metrics: [:], views: views))
+        
+        self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[firstView(firstViewHeight)][secondView(secondViewHeight)][thirdContainerView(thirdViewHeight)]|", options: [], metrics: metrics, views: views))
+        
+        self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[fifthView(==thirdContainerView)]|", options: [], metrics: metrics, views: views))
+        
+        self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[forthView(==thirdContainerView)]|", options: [], metrics: metrics, views: views))
+        
+        self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[label(==secondView)]|", options:  NSLayoutFormatOptions.alignAllCenterX, metrics: [:], views: views))
+        
+        self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[label(==secondView)]|", options: NSLayoutFormatOptions.alignAllCenterY, metrics: [:], views: views))
+        
         
     }
     
