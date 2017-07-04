@@ -14,7 +14,12 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        let mainContainer = UIView()
+        
+        
+        //  EXAMPLE 1.
+        //  ======================================
+         
+        /*let mainContainer = UIView()
         mainContainer.backgroundColor = UIColor.blue
         mainContainer.translatesAutoresizingMaskIntoConstraints = false
         
@@ -26,7 +31,31 @@ class ViewController: UIViewController {
         
         self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[mainContainer]|", options: [], metrics: metrics, views: views))
         
-        self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[mainContainer]|", options: [], metrics: metrics, views: views))
+        self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[mainContainer]|", options: [], metrics: metrics, views: views))*/
+        
+        
+        //  EXAMPLE 2.
+        //  ======================================
+ 
+        let firstView = UIView()
+        firstView.backgroundColor = UIColor.blue
+        firstView.translatesAutoresizingMaskIntoConstraints = false
+        
+        let secondView = UIView()
+        secondView.backgroundColor = UIColor.red
+        secondView.translatesAutoresizingMaskIntoConstraints = false
+         
+        self.view.addSubview(firstView)
+        self.view.addSubview(secondView)
+        
+        let views = ["firstView" : firstView, "secondView": secondView]
+        
+        self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[firstView]|", options: [], metrics: [:], views: views))
+        
+        self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[secondView]|", options: [], metrics: [:], views: views))
+         
+        self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[firstView][secondView(==firstView)]|", options: [], metrics: [:], views: views))
+        
         
     }
     
