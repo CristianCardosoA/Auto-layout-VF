@@ -71,6 +71,42 @@ self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[f
 
 <img src="https://github.com/CristianCardosoA/Auto-layout-VF/blob/master/Screen%20Shot%202017-07-03%20at%2010.56.52%20PM.png" width="250" />
 
+#### Example 3.
+
+```javascript
+let firstView = UIView()
+firstView.backgroundColor = UIColor.blue
+firstView.translatesAutoresizingMaskIntoConstraints = false
+         
+let secondView = UIView()
+secondView.backgroundColor = UIColor.red
+secondView.translatesAutoresizingMaskIntoConstraints = false
+        
+let thirdView = UIView()
+thirdView.backgroundColor = UIColor.yellow
+thirdView.translatesAutoresizingMaskIntoConstraints = false
+        
+self.view.addSubview(firstView)
+self.view.addSubview(secondView)
+self.view.addSubview(thirdView)
+        
+let metrics = ["padding" : self.view.bounds.height / 10]
+        
+let views = ["firstView" : firstView, "secondView": secondView, "thirdView": thirdView]
+         
+self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[firstView][secondView(==firstView)][thirdView(==firstView)]|", options: [], metrics: [:], views: views))
+        
+self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-(padding)-[firstView]-(padding)-|", options: [], metrics: metrics, views: views))
+        
+self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-(padding)-[secondView]-(padding)-|", options: [], metrics: metrics, views: views))
+        
+self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-(padding)-[thirdView]-(padding)-|", options: [], metrics: metrics, views: views))
+```
+
+#### Example 3 screenshot result.
+
+<img src="https://github.com/CristianCardosoA/Auto-layout-VF/blob/master/Screen%20Shot%202017-07-03%20at%2011.09.54%20PM.png" width="250" />
+
 ### More info about VF language:
 
  * [Apple Developers](https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/AutolayoutPG/VisualFormatLanguage.html) for more info.
