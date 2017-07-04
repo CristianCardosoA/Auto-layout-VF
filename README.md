@@ -16,14 +16,14 @@ Lets create a multiple example using visual format language to create new constr
 
 Look, a list!
 
- * [Example 1]()
+ * [Example 1](#Example1)
  * [Example 2]()
  * [Example 3]()
  * [Example 4]()
 
 And here's some code! :+1:
 
-#### Example 1.
+## Example1
 
 ```Swift
 let mainContainer = UIView()
