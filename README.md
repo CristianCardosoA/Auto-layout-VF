@@ -26,8 +26,8 @@ And here's some code! :+1:
 
 ```javascript
 let mainContainer = UIView()
-        mainContainer.backgroundColor = UIColor.blue
-        mainContainer.translatesAutoresizingMaskIntoConstraints = false
+mainContainer.backgroundColor = UIColor.blue
+mainContainer.translatesAutoresizingMaskIntoConstraints = false
         
 self.view.addSubview(mainContainer)
         
