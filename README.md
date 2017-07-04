@@ -19,6 +19,7 @@ Look, a list!
  * [Example 1]()
  * [Example 2]()
  * [Example 3]()
+ * [Example 4]()
 
 And here's some code! :+1:
 
@@ -104,6 +105,70 @@ self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-(
 ```
 
 #### Example 3 screenshot result.
+
+<img src="https://github.com/CristianCardosoA/Auto-layout-VF/blob/master/Screen%20Shot%202017-07-03%20at%2011.09.54%20PM.png" width="250" />
+
+#### Example 4.
+
+```javascript
+let firstView = UIView()
+firstView.backgroundColor = UIColor(patternImage: UIImage(named:"image.jpg")!)
+firstView.translatesAutoresizingMaskIntoConstraints = false
+
+let secondView = UIView()
+secondView.backgroundColor = UIColor.gray
+secondView.translatesAutoresizingMaskIntoConstraints = false
+
+let label = UILabel()
+label.translatesAutoresizingMaskIntoConstraints = false
+label.text = "EXAMPLE 4"
+label.textColor = UIColor.white
+label.textAlignment = .center
+secondView.addSubview(label)
+
+let thirdContainerView = UIView()
+thirdContainerView.backgroundColor = UIColor.yellow
+thirdContainerView.translatesAutoresizingMaskIntoConstraints = false
+
+let forthView = UIView()
+forthView.backgroundColor = UIColor.orange
+forthView.translatesAutoresizingMaskIntoConstraints = false
+
+let fifthView = UIView()
+fifthView.backgroundColor = UIColor.cyan
+fifthView.translatesAutoresizingMaskIntoConstraints = false
+
+thirdContainerView.addSubview(forthView)
+thirdContainerView.addSubview(fifthView)
+
+self.view.addSubview(firstView)
+self.view.addSubview(secondView)
+self.view.addSubview(thirdContainerView)
+
+let metrics = ["firstViewHeight" : self.view.bounds.height * 0.6, "secondViewHeight" : self.view.bounds.height * 0.3, "thirdViewHeight" : self.view.bounds.height * 0.1]
+
+let views = ["firstView" : firstView, "secondView": secondView, "thirdContainerView": thirdContainerView, "forthView" : forthView, "fifthView": fifthView, "label" : label]
+
+self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[firstView]|", options: [], metrics: [:], views: views))
+
+self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[secondView]|", options: [], metrics: [:], views: views))
+
+self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[thirdContainerView]|", options: [], metrics: [:], views: views))
+
+self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[forthView][fifthView(==forthView)]|", options: [], metrics: [:], views: views))
+
+self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[firstView(firstViewHeight)][secondView(secondViewHeight)][thirdContainerView(thirdViewHeight)]|", options: [], metrics: metrics, views: views))
+
+self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[fifthView(==thirdContainerView)]|", options: [], metrics: metrics, views: views))
+
+self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[forthView(==thirdContainerView)]|", options: [], metrics: metrics, views: views))
+
+self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[label(==secondView)]|", options:  NSLayoutFormatOptions.alignAllCenterX, metrics: [:], views: views))
+
+self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[label(==secondView)]|", options: NSLayoutFormatOptions.alignAllCenterY, metrics: [:], views: views))
+```
+
+#### Example 4 screenshot result.
 
 <img src="https://github.com/CristianCardosoA/Auto-layout-VF/blob/master/Screen%20Shot%202017-07-03%20at%2011.09.54%20PM.png" width="250" />
 
