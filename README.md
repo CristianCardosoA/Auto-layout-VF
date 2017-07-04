@@ -44,6 +44,33 @@ self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[m
 
 <img src="https://github.com/CristianCardosoA/Auto-layout-VF/blob/master/Screen%20Shot%202017-07-03%20at%2010.41.28%20PM.png" width="250" />
 
+#### Example 2.
+
+```javascript
+let firstView = UIView()
+firstView.backgroundColor = UIColor.blue
+firstView.translatesAutoresizingMaskIntoConstraints = false
+        
+let secondView = UIView()
+secondView.backgroundColor = UIColor.red
+secondView.translatesAutoresizingMaskIntoConstraints = false
+         
+self.view.addSubview(firstView)
+self.view.addSubview(secondView)
+        
+let views = ["firstView" : firstView, "secondView": secondView]
+        
+self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[firstView]|", options: [], metrics: [:], views: views))
+        
+self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[secondView]|", options: [], metrics: [:], views: views))
+         
+self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[firstView][secondView(==firstView)]|", options: [], metrics: [:], views: views))
+```
+
+#### Example 2 screenshot result.
+
+<img src="https://github.com/CristianCardosoA/Auto-layout-VF/blob/master/Screen%20Shot%202017-07-03%20at%2010.56.52%20PM.png" width="250" />
+
 ### More info about VF language:
 
  * [Apple Developers](https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/AutolayoutPG/VisualFormatLanguage.html) for more info.
